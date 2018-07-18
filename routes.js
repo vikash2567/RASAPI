@@ -12,14 +12,14 @@ module.exports = [
     
     {
         method: 'GET',
-        path: '/raslog',
+        path: '/allLogs',
         handler: function (request, h) {
             return RasLog.find({});
         }
     },
     {
         method: ['PUT', 'POST'],
-        path: '/raslog',
+        path: '/addLog',
         handler: async (request, h) => { 
             const params = request.query;   
             const raslog = new RasLog({
